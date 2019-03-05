@@ -1,0 +1,24 @@
+.section {
+  padding: 4rem 0;
+}
+
+.colored {
+  background: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+.colored h1,
+.colored h2,
+.colored h3,
+.colored h4,
+.colored h5,
+.colored h6 {
+  color: #fff;
+}
+
+.colored a {
+  color: #fff;
+}
+.colored a:hover::after {
+  background: #fff;
+}
