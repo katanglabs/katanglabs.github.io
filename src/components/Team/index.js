@@ -35,7 +35,7 @@ const members = [
   {
     name: 'Kabir Goel',
     designation: 'CEO',
-    description: `Kabir is the CEO & technical director at Katang Labs and the creator of SkyAI. He’s also
+    description: `Kabir is the CEO & technical director at Katang Labs, and the creator of SkyAI. He’s also
     responsible for product design. In his free time, he enjoys building
     things with code.`,
     links: [
@@ -76,7 +76,11 @@ const members = [
 const Member = ({ name, designation, description, links }) => (
   <div style={{ marginBottom: '8rem' }}>
     <Title name={name} designation={designation} />
-    <Card>{description}</Card>
+    <Row>
+      <Column size="ten">
+        <Card>{description}</Card>
+      </Column>
+    </Row>
     <div>
       {links.map(link => (
         <a style={{ marginRight: '2rem' }} href={link.href}>
@@ -95,34 +99,10 @@ Member.propTypes = {
 
 const Team = () => (
   <Section colored>
-    <Row>
-      <Column size="two">
-        <div style={{ position: 'sticky', top: 0 }}>
-          <h1
-            style={{
-              display: 'block',
-              marginTop: 0,
-              padding: 0,
-              lineHeight: 1,
-            }}
-          >
-            Team
-          </h1>
-        </div>
-      </Column>
-      <Column size="ten">
-        <div
-          style={{
-            borderLeft: '1px solid #eaeaef66',
-            paddingLeft: '4rem',
-          }}
-        >
-          {members.map(member => (
-            <Member {...member} />
-          ))}
-        </div>
-      </Column>
-    </Row>
+    <h1>Team</h1>
+    {members.map(member => (
+      <Member {...member} />
+    ))}
   </Section>
 )
 
