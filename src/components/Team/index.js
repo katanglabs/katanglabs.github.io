@@ -58,6 +58,10 @@ const members = [
         title: 'Email',
         href: 'mailto:goeltanish15@gmail.com',
       },
+      {
+        title: 'Website',
+        href: 'https://tanishgoel.github.io',
+      },
     ],
   },
   {
